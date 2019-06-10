@@ -34,3 +34,10 @@ Now open Web Browser and Goto
 	
 	127.0.0.1:5000
 
+Note
+1. API Key is obtained from
+
+	openweathermap.org
+	darksky.net
+
+2. Project is Completely based on Python and HTML
