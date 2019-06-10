@@ -41,3 +41,7 @@ Note
 	darksky.net
 	
 2 Project is Completely based on Python and HTML
+
+3 To view the User Account Login Credentials Database, download
+
+	DB Browser for SQLite
