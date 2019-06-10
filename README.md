@@ -1,7 +1,6 @@
 # SolarPowerPredictor
 
 Dependencies:
-	Python
 	flask
 	pickle
 	tensorflow
