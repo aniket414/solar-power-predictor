@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="Solar Power Predictor Template">
+    <meta name="author" content="Aniket">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base_style.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0099ff;<!--#ffff00 #0099ff-->
+        }
+        
+    </style>
+</head>
+
+<body>
+    {% block nav%}
+    <nav cass="nav-bar">
+        <ul>
+            {% if g.user %}
+              <li><span>Logged In: {{ g.user['username'] }}</span>
+              <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+              <li><a href="{{ url_for('weather.home') }}">Predict</a>
+            {% else %}
+              <li><a href="{{ url_for('auth.register') }}">Register</a>
+              <li><a href="{{ url_for('auth.login') }}">Log In</a>
+            {% endif %}
+            <li><a href="{{ url_for('weather.index') }}">Home</a>
+        </ul>
+    </nav>
+    {% endblock%}
+
+
+
+    {% block body %}{% endblock%}
+
+    
+
+</body>
+
+</html>

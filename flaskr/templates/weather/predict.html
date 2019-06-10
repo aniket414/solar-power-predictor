@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+
+{% block body %}
+
+	 <div id="container-city_name">
+	 	<div id="title">
+ 			<h1>Predictions Page</h1>
+ 			<p id="predictTitle">
+ 				{{'{:.3f}'.format(session.get('predict_result'))}}
+ 				<span>KWh</span>
+ 			</p>
+
+	 		
+
+		</div>
+		<div style="text-align: center;">
+			{% set counter=0 %}
+			{% for key in session['params'] %}
+ 				{{"{} : {:.2f}".format(key,session['params'][key])}}<br/>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+
+{% block body %}
+
+	 <div id="container-city_name">
+	 	<div id="title">
+		<form action="{{url_for('weather.predict')}}" method="POST">
+			<i class="material-icons lock" style="font-size:60px;color:red">baseline_place</i> 
+			Select city:
+			<select name="city_name">
+				<option value="Pune">Pune</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Chennai">Chennai</option><br>
+				<input type="submit" value="Submit">
+			</select>
+		</form>
+		</div>
+	</div>
+
+{% endblock %}
