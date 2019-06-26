@@ -41,11 +41,11 @@ def home():
 def predict():
 	if request.method=='POST':
 		#gmaps = googlemaps.Client(key='AIzaSyCKDz2le7flatBRk2tlKSPHQkWOb-JnIaM')
-		weather_api_openweathermap = 'f556fafd24efcd2934d9ed1a86b8374d'
+		weather_api_openweathermap = #'f556fafd24efcd2934d9ed1a86b8374d' #Remove hashtag before running
 		default_country = 'in'
 		city_name = request.form['city_name']
 
-		weather_api_darksky = '39cfb4d6c9cd0113694846cc3f388a2c' # create account at https://darksky.net/dev/
+		weather_api_darksky = #'39cfb4d6c9cd0113694846cc3f388a2c' # Remove hashtag before running;create account at https://darksky.net/dev/
 		weather_lang = 'en'
 		weather_unit = 'si'
 
@@ -124,7 +124,7 @@ def predict():
 
 		#model = pickle.load(open(url_for('static', filename='modell.pkl'),'rb'))
 		#model = session.get('model')
-		model = pickle.load(open('/Users/aniket/SolarPowerPredictor/flaskr/static/modell.pkl','rb'))
+		model = pickle.load(open('/Users/aniket/SolarPowerPredictor/flaskr/static/modell.pkl','rb')) #Update the path
 		# model = pickle.load(open('static/modell.pkl','rb'))
 		# path = url_for('static', filename='modell.pkl')
 		# print(path)
