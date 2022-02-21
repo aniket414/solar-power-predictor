@@ -1,4 +1,4 @@
-# SolarPowerPredictor
+# Solar Power Predictor
 
 Dependencies:
 	
